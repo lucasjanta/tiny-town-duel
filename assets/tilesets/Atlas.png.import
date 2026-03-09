@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ljvy3sd4b34b"
-path="res://.godot/imported/Background1.png-aa503c0614d5f4ddfdbfc9b084e25705.ctex"
+uid="uid://c0oy7rw5rtalk"
+path="res://.godot/imported/Atlas.png-4f6a90c6ce60b72a8d8c15c46939f2cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/main menu/Background1.png"
-dest_files=["res://.godot/imported/Background1.png-aa503c0614d5f4ddfdbfc9b084e25705.ctex"]
+source_file="res://assets/tilesets/Atlas.png"
+dest_files=["res://.godot/imported/Atlas.png-4f6a90c6ce60b72a8d8c15c46939f2cd.ctex"]
 
 [params]
 

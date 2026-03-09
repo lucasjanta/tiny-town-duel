@@ -1,7 +1,66 @@
 [gd_scene format=3 uid="uid://b0gkoj5hiegsd"]
 
+[ext_resource type="Script" uid="uid://bpbs4uwnxohpm" path="res://scripts/UI/main_menu.gd" id="1_e2p27"]
+[ext_resource type="Texture2D" uid="uid://c3fnico4n50vv" path="res://assets/bg/main menu/Background2.png" id="1_tfcbk"]
 [ext_resource type="FontFile" uid="uid://crn560c3r34je" path="res://assets/fonts/BroncoPersonalUse.ttf" id="1_yonvy"]
 [ext_resource type="FontFile" uid="uid://cbddvn1rtcm7g" path="res://assets/fonts/BANDITO_PERSONAL_USE.ttf" id="2_5jstl"]
+[ext_resource type="Texture2D" uid="uid://bngu2yx1375hg" path="res://assets/bg/main menu/Background1_nobg.png" id="2_e2p27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfcbk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.74509805)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2p27"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.22352941, 0.22352941, 0.22352941, 0.74509805)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngj32"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.74509805)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm8t2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.22352941, 0.22352941, 0.22352941, 0.74509805)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="MainMenu" type="Control" unique_id=1757426280]
 layout_mode = 3
@@ -10,6 +69,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_e2p27")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1444072473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tfcbk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=629961637]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e2p27")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=954357766]
 layout_mode = 1
@@ -59,15 +137,29 @@ size_flags_vertical = 8
 
 [node name="PlayButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1132860821]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_fonts/font = ExtResource("1_yonvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfcbk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2p27")
 text = "Play"
 
 [node name="OptionsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1294672131]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_yonvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ngj32")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bm8t2")
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1795520277]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_yonvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ngj32")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bm8t2")
 text = "Quit"
+
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]

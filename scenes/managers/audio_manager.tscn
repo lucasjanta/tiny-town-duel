@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://tyuese7keq0j"]
+
+[ext_resource type="AudioStream" uid="uid://6r1e4mbhr3i" path="res://assets/sounds/music/azaFMP2_menu2_AnotherWorld.ogg" id="1_aybmh"]
+[ext_resource type="Script" uid="uid://12lmehroplhw" path="res://scenes/managers/audio_manager.gd" id="1_ioryo"]
+[ext_resource type="AudioStream" uid="uid://ipo7oqap4g3j" path="res://assets/sounds/SFX/UI_Banjo_1.ogg" id="3_nqjyk"]
+[ext_resource type="AudioStream" uid="uid://djlvbdfi0pjd1" path="res://assets/sounds/SFX/UI_Banjo_2.ogg" id="4_vqw5g"]
+[ext_resource type="AudioStream" uid="uid://dqxfxs4gdstko" path="res://assets/sounds/SFX/UI_Banjo_3.ogg" id="5_wiybg"]
+
+[node name="AudioManager" type="Node2D" unique_id=1315486700]
+script = ExtResource("1_ioryo")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1372859519]
+stream = ExtResource("1_aybmh")
+parameters/looping = true
+
+[node name="TownSquareMusic" type="AudioStreamPlayer" parent="." unique_id=1561638566]
+
+[node name="CemeteryMusic" type="AudioStreamPlayer" parent="." unique_id=1954146469]
+
+[node name="SaloonMusic" type="AudioStreamPlayer" parent="." unique_id=256549369]
+
+[node name="StableMusic" type="AudioStreamPlayer" parent="." unique_id=1001115206]
+
+[node name="MenuMusic3" type="AudioStreamPlayer" parent="." unique_id=1355546651]
+
+[node name="hover_1" type="AudioStreamPlayer" parent="." unique_id=707434342]
+stream = ExtResource("3_nqjyk")
+
+[node name="hover_2" type="AudioStreamPlayer" parent="." unique_id=124636462]
+stream = ExtResource("4_vqw5g")
+
+[node name="hover_3" type="AudioStreamPlayer" parent="." unique_id=1634661012]
+stream = ExtResource("5_wiybg")
