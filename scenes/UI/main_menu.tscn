@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b0gkoj5hiegsd"]
 
+[ext_resource type="FontFile" uid="uid://crn560c3r34je" path="res://assets/fonts/BroncoPersonalUse.ttf" id="1_yonvy"]
+[ext_resource type="FontFile" uid="uid://cbddvn1rtcm7g" path="res://assets/fonts/BANDITO_PERSONAL_USE.ttf" id="2_5jstl"]
+
 [node name="MainMenu" type="Control" unique_id=1757426280]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=954357766]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1143007054]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1793062558]
+custom_minimum_size = Vector2(284.11, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = -9
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1028617643]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_yonvy")
+theme_override_font_sizes/font_size = 80
+text = "Tiny Town"
+
+[node name="Title2Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=768861945]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_5jstl")
+theme_override_font_sizes/font_size = 60
+text = "DUEL"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=84206085]
+custom_minimum_size = Vector2(121.645, 92.435)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="PlayButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1132860821]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yonvy")
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1294672131]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yonvy")
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1795520277]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yonvy")
+text = "Quit"
