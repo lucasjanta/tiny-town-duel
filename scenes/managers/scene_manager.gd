@@ -11,7 +11,7 @@ var scene_cache: Dictionary = {} # Store loaded scenes by path
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.scene_manager = self
-	current_gui_scene = $CanvasLayer/UI/main_menu
+	current_gui_scene = $CanvasLayer/GUI/MainMenu
 	
 	if current_gui_scene and current_gui_scene.scene_file_path:
 		scene_cache[current_gui_scene.scene_file_path] = current_gui_scene

@@ -8,6 +8,10 @@ func play_menu_music():
 	stop_all_music()
 	menu_music.play()
 	
+func play_town_music():
+	stop_all_music()
+	
+	
 func stop_all_music():
 	menu_music.stop()
 	

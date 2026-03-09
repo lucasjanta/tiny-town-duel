@@ -13,13 +13,9 @@ script = ExtResource("1_ioryo")
 stream = ExtResource("1_aybmh")
 parameters/looping = true
 
-[node name="TownSquareMusic" type="AudioStreamPlayer" parent="." unique_id=1561638566]
+[node name="TownMusic" type="AudioStreamPlayer" parent="." unique_id=1561638566]
 
 [node name="CemeteryMusic" type="AudioStreamPlayer" parent="." unique_id=1954146469]
-
-[node name="SaloonMusic" type="AudioStreamPlayer" parent="." unique_id=256549369]
-
-[node name="StableMusic" type="AudioStreamPlayer" parent="." unique_id=1001115206]
 
 [node name="MenuMusic3" type="AudioStreamPlayer" parent="." unique_id=1355546651]
 
